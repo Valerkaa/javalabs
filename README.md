@@ -1,45 +1,26 @@
-# Cinema Booking System
+# E-Commerce Platform
 
-This is a simple cinema booking system implemented in Java. The system allows users to interactively book and cancel seats, check seat availability, and view the seating arrangement in different cinema halls.
+This Java project simulates an e-commerce platform with various classes to represent users, products, orders, and their interactions.
 
-## Classes
+## Project Structure
 
-### 1. Main Class (Main.java)
+1. **ECommerceDemo:**
+   The `ECommerceDemo` class serves as the main entry point for the application. It initializes the platform, users, and products, and simulates user interactions.
 
-#### Overview
-The `Main` class is the entry point of the application. It handles user input and provides a menu-driven interface for interacting with the cinema booking system.
+2. **UserInteractionHandler:**
+   The `UserInteractionHandler` class manages user interactions, displaying the main menu and handling user choices.
 
-#### Methods
-- **main**: The main method initializes the cinema halls, prompts the user to select a hall, and continuously displays a menu for booking, canceling, checking availability, printing the seating arrangement, and exiting the program.
+3. **Order:**
+   The `Order` class represents an order, including order items and the calculation of the total price.
 
-- **selectHall**: Prompts the user to select a cinema hall.
+4. **User:**
+   The `User` class encapsulates user information, such as ID, username, and a shopping cart. It provides methods to add products to the cart and clear it.
 
-- **bookSeats**: Allows the user to book seats by specifying the row, number of seats, and seat numbers.
+5. **Product:**
+   The `Product` class defines a product with properties like ID, name, price, and stock. It implements the `Comparable` interface for sorting based on price.
 
-- **cancelBooking**: Allows the user to cancel a booking by specifying the row, number of seats, and seat numbers.
+6. **OrderItem:**
+   The `OrderItem` class represents an item in an order, consisting of a product and a quantity.
 
-- **checkAvailability**: Checks the availability of seats in a specific row.
-
-- **printSeatingArrangement**: Displays the current seating arrangement for a selected cinema hall.
-
-- **getSeatStatus**: Returns the status of a seat as either booked ('O') or available ('X').
-
-### 2. Initialization Class (Initialization.java)
-
-#### Overview
-The `Initialization` class is responsible for initializing the cinema halls with available seats.
-
-#### Methods
-- **initializeHall**: Initializes a cinema hall with rows and seats, marking all seats as available ('O').
-
-### 3. Booking Class (Booking.java)
-
-#### Overview
-The `Booking` class contains methods for booking seats, canceling bookings, and checking seat availability.
-
-#### Methods
-- **bookSeats**: Marks selected seats as booked ('1') in a specific cinema hall.
-
-- **cancelBooking**: Cancels the booking of selected seats in a specific cinema hall.
-
-- **checkAvailability**: Checks if a specified number of seats is available in a particular row of a cinema hall.
+7. **ECommercePlatform:**
+   The `ECommercePlatform` class is the core of the e-commerce system. It manages users, products, and orders. It provides methods for adding users and products, creating orders, and displaying information about users, products, and orders.
